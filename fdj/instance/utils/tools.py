@@ -64,16 +64,30 @@ def aes_ecb_encrypt(raw, style='pkcs7'):
     return utf8_encypted
 
 
+# def aes_ecb_decrypted(encrypted):
+#     try:
+#         # b64 = json.loads(encrypted)
+#         decryption = {}
+#         # for key, value in b64:
+#         for key, value in encrypted.items():
+#             value = base64.b64decode(value)
+#             value = unpad(cipher.decrypt(value), AES.block_size)
+#             decryption[key] = value.decode('utf-8')
+#     except json.JSONDecodeError:
+#         encrypted = base64.b64decode(encrypted)
+#         decrypted = unpad(cipher.decrypt(encrypted), AES.block_size)
+#         decrypted = decrypted.decode('utf-8')
+#     return decrypted
+
 def aes_ecb_decrypted(encrypted):
-    try:
-        # b64 = json.loads(encrypted)
+    if isinstance(encrypted, dict):
         decryption = {}
         # for key, value in b64:
         for key, value in encrypted.items():
             value = base64.b64decode(value)
             value = unpad(cipher.decrypt(value), AES.block_size)
             decryption[key] = value.decode('utf-8')
-    except json.JSONDecodeError:
+    else:
         encrypted = base64.b64decode(encrypted)
         decrypted = unpad(cipher.decrypt(encrypted), AES.block_size)
         decrypted = decrypted.decode('utf-8')
