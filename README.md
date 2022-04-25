@@ -1,4 +1,4 @@
-# project_flask
+# project_python_style
 projects based on flask web framework and integrated by gunicorn web server or uwsgi web server
 python setup build_ext (transform pyx pdx to *.so or *.pyd to accelerate algorithm)
 components of template according to the playout of production and integrated by jenkins
