@@ -7,13 +7,17 @@ Created on Tue Mar 12 15:37:47 2019
 """
 import os
 import configparser
+from pathlib import Path
 
 cf = configparser.ConfigParser()
-cur_dir = os.path.abspath('.')  # 获取当前文件所在目录
+# 获取当前文件所在目录
+# cur_dir = os.path.abspath('./instance')
+cur_dir = str(Path(__file__).resolve().parent.parent)
 
 
 def readConfig(name):
     configpath = os.path.join(cur_dir, name)
+    print('configpath', configpath)
     cf.read(configpath)  # 读取配置文件
     return cf
 

@@ -5,6 +5,7 @@ Created on Tue Mar 12 15:37:47 2019
 
 @author: python
 """
+import os
 from flask_cors import CORS
 from instance import create_app
 from instance.utils import cf
@@ -37,6 +38,8 @@ if __name__ == "__main__":
     # from instance import dbs
     # atexit.register(dbs.atexit)
     # 服务
-    app.run(host=cf.get('service', 'FLASK_IP'),
-            port=cf.get('service', 'FLASK_PORT'),
-            threaded=True, debug=True)
+    # app.run(host=cf.get('service', 'FLASK_IP'),
+    #         port=cf.get('service', 'FLASK_PORT'),
+    #         threaded=True, debug=True)
+    # docker
+    app.run(host=os.environ['flask_ip'], port=os.environ['flask_port'], threaded=True, debug=True)

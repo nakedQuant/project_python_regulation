@@ -6,22 +6,34 @@ Created on Tue Mar 12 15:37:47 2019
 @author: python
 """
 import sqlalchemy as sa
-from sqlalchemy import MetaData
+from sqlalchemy import MetaData, create_engine
 from sqlalchemy.sql import func
-from sqlalchemy import create_engine
+import os
 from urllib.parse import quote_plus
 from ..utils import cf
 
 
 def _initialize_engine():
-    username = cf.get('development', 'username')
-    password = cf.get('development', 'password')
-    host = cf.get('development', 'host')
-    port = cf.getint('property', 'port')
-    db = cf.get('property', 'db')
-    charset = cf.get('property', 'charset')
-    pool_size = cf.getint('property', 'pool_size')
-    max_overflow = cf.getint('property', 'max_overflow')
+
+    # docker
+    username = os.environ['username']
+    password = os.environ['password']
+    host = os.environ['host']
+    port = os.environ['port']
+    db = os.environ['db']
+    pool_size = int(os.environ['pool_size'])
+    max_overflow = int(os.environ['max_overflow'])
+    charset = os.environ['charset']
+
+    # deploy = os.environ['deploy']
+    # username = cf.get(deploy, 'username')
+    # password = cf.get(deploy, 'password')
+    # host = cf.get(deploy, 'host')
+    # port = cf.getint('property', 'port')
+    # db = cf.get('property', 'db')
+    # charset = cf.get('property', 'charset')
+    # pool_size = cf.getint('property', 'pool_size')
+    # max_overflow = cf.getint('property', 'max_overflow')
 
     # urllib.parse.quote_plus("kx%jj5/g")
     password = quote_plus(password)

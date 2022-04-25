@@ -6,7 +6,7 @@ Created on Tue Mar 12 15:37:47 2019
 @author: python
 """
 from .cfg import overwrite, cf
-from .auth import register, validate
+from .auth import register, validate, cas_token
 from .tools import resample, aes_ecb_encrypt, aes_ecb_decrypted, count_time, jsonEncoder, uniqueName
 from .proc import figureLines, formatOutput, fetch
 from .can import canParse, torquePercent2torque

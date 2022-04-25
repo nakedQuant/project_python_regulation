@@ -8,10 +8,8 @@ Created on 2021.11.4
 blueprint: 模拟CAS服务token
 
 """
-import json
-import requests
 from flask import Blueprint, request
-from ..utils import cf, aes_ecb_decrypted, register, jsonEncoder
+from ..utils import cf, aes_ecb_decrypted, register, jsonEncoder, cas_token
 
 bp_cas = Blueprint('bp_cas', __name__, url_prefix='/user-service')
 
@@ -20,21 +18,6 @@ bp_cas = Blueprint('bp_cas', __name__, url_prefix='/user-service')
 def index():
     resp = 'Hello, patch cas service'
     return jsonEncoder(resp)
-
-
-# @bp_cas.route('/login', methods=('POST',))
-# def login():
-#     """
-#         input: {"user": "liuhx25", "password":"test"}
-#
-#     :return:
-#         {"token": "TGT-1803803-ck-nNd-jI"}
-#     """
-#     import os, base64
-#     req_params = request.get_json(force=True)
-#     key = base64.b64encode(os.urandom(5)).decode('utf-8')
-#     token = '-'.join([req_params['user'], req_params['password'], key])
-#     return json.dumps({"token": token})
 
 
 @bp_cas.route('/login', methods=('POST',))
@@ -50,14 +33,7 @@ def login():
     req_params = aes_ecb_decrypted(original)
     print('login api', req_params)
     try:
-        # params = {'userCode': req_params['user'], 'password': req_params['password']}
-        params = {'user': req_params['user'], 'password': req_params['password']}
-        headers = {'Content-type': 'application/json'}
-        # post to cas
-        url = cf.get('authentic', 'tokenUrl')
-        # token
-        result = requests.post(url, data=json.dumps(params), headers=headers)
-        token = json.loads(result.content)['token']
+        token, params = cas_token(req_params)
         # register
         params.update({'token': token})
         status = register(params)

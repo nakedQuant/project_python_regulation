@@ -12,6 +12,12 @@ from .cfg import cf
 
 registerUrl = cf.get('authentic', 'registerUrl')
 validateUrl = cf.get('authentic', 'validateUrl')
+tokenUrl = cf.get('authentic', 'tokenUrl')
+
+# docker
+# tokenurl = 'http://cas:20000/cas_service'
+# registerurl = 'http://cas:20000/register'
+# validateurl = 'http://cas:20000/validate'
 
 
 def register(params):
@@ -37,3 +43,15 @@ def validate(params):
     result = json.loads(req.content)
     print('validate', result)
     return result['status']
+
+
+def cas_token(req_params):
+    # params = {'userCode': req_params['user'], 'password': req_params['password']}
+    params = {'user': req_params['user'], 'password': req_params['password']}
+    headers = {'Content-type': 'application/json'}
+    # post to cas token
+    result = requests.post(tokenUrl, data=json.dumps(params), headers=headers)
+    token = json.loads(result.content)['token']
+    # key = base64.b64encode(os.urandom(5)).decode('utf-8')
+    # token = '-'.join([req_params['user'], req_params['password'], key])
+    return token, params

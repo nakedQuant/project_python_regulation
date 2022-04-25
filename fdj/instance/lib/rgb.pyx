@@ -2,9 +2,9 @@
 import cython
 from libc.math cimport pow
 from libc.stdio cimport printf
-from cython.parallel cimport prange
 cimport numpy as c_np
 import numpy as np
+from cython.parallel cimport prange
 
 
 # cython: boundscheck=False

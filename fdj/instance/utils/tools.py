@@ -15,7 +15,7 @@ import pandas as pd
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from .cfg import cf
-# from ..lib import rgb_numpy, rgb_memview
+from ..lib import rgb_numpy, rgb_memview, rgb_prange
 
 
 def jsonEncoder(resp):
@@ -23,11 +23,11 @@ def jsonEncoder(resp):
     class NpEncoder(json.JSONEncoder):
 
         def default(self, o: Any) -> Any:
-            if isinstance(o, np.int):
+            if isinstance(o, np.int32):
                 return int(o)
-            elif isinstance(o, np.float):
+            elif isinstance(o, np.float32):
                 return float(o)
-            elif isinstance(o, (np.array, np.ndarray)):
+            elif isinstance(o, np.ndarray):
                 return o.tolist()
             elif isinstance(o, pd.Timestamp):
                 return o.strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -64,21 +64,6 @@ def aes_ecb_encrypt(raw, style='pkcs7'):
     return utf8_encypted
 
 
-# def aes_ecb_decrypted(encrypted):
-#     try:
-#         # b64 = json.loads(encrypted)
-#         decryption = {}
-#         # for key, value in b64:
-#         for key, value in encrypted.items():
-#             value = base64.b64decode(value)
-#             value = unpad(cipher.decrypt(value), AES.block_size)
-#             decryption[key] = value.decode('utf-8')
-#     except json.JSONDecodeError:
-#         encrypted = base64.b64decode(encrypted)
-#         decrypted = unpad(cipher.decrypt(encrypted), AES.block_size)
-#         decrypted = decrypted.decode('utf-8')
-#     return decrypted
-
 def aes_ecb_decrypted(encrypted):
     if isinstance(encrypted, dict):
         decryption = {}
@@ -101,110 +86,59 @@ def _init_aes():
     return cipher
 
 
-# def simulateRgb(output, r=50, threshold=1000):
-#
-#     def run(delta, df, r):
-#         s, e = delta
-#         item = df.loc[s: e, :]
-#         x = np.array(item['speed'].loc[s: e, ].values)
-#         y = np.array(item['torque'].loc[s: e, ].values)
-#         out = np.zeros_like(x)
-#         z = np.array(list(zip(x, y)))
-#         # nums = rgb_numpy(r, np.array(list(z)), out)
-#         nums = rgb_memview(r, np.array(list(z)), out)
-#         # nums to rgbRate
-#         # rgb = list(map(lambda x: 255 * x/sum(nums), nums))
-#         # rgb > 'rgb()'
-#         # rgb = ['rgb(%d,%d,%d)' % (i, i, i) for i in rgb]
-#         rgb = [r if r <= 255 else 255 for r in nums]
-#         item.loc[:, 'color'] = rgb
-#         res = list(item.T.to_dict().values())
-#         # print('res', res[:5])
-#         return res
-#
-#     # mappings -> dataframe
-#     output = pd.DataFrame(output)
-#     print('simulateRgb', output.head())
-#     # astype
-#     output = output.astype('int')
-#     length = len(output)
-#     # slice
-#     start = range(length)[::threshold]
-#     end = range(length)[threshold::threshold]
-#     intervals = list(zip(start, end))
-#     # keep intervals complete
-#     if length % threshold:
-#         from itertools import chain
-#         last = (end[-1], length)
-#         intervals.append(last)
-#
-#     from functools import partial
-#     func = partial(run, df=output, r=r**2)
-#     outcome = [func(args) for args in intervals]
-#     # outcome = [run(args) for args in intervals]
-#     # chain
-#     result = list(chain(*outcome))
-#     return result
+def simulateRgb(output, r=50, threshold=1000):
 
+    def run(delta, df, delimeter):
+        s, e = delta
+        item = df.loc[s: e, :]
+        x = np.array(item['speed'].loc[s: e, ].values)
+        y = np.array(item['torque'].loc[s: e, ].values)
+        z = np.array(list(zip(x, y)))
+        nums = rgb_numpy(delimeter, z)
+        # nums = rgb_memview(r, z)
+        # nums = rgb_prange(r, z)
+        # nums to rgbRate
+        # nums = list(map(lambda x: 255 * x/sum(nums), nums))
+        res = [{'speed': item[0][0], 'torque': item[0][1], 'color': item[1]} for item in zip(z, nums)]
+        return res
 
-# def simulateRgb(output, r=50, threshold=1000):
-#
-#     def run(delta, df, r):
-#         s, e = delta
-#         item = df.loc[s: e, :]
-#         x = np.array(item['speed'].loc[s: e, ].values)
-#         y = np.array(item['torque'].loc[s: e, ].values)
-#         out = np.zeros_like(x)
-#         z = np.array(list(zip(x, y)))
-#         # memory leak heap
-#         # nums = rgb_numpy(r, np.array(list(z)), out)
-#         nums = rgb_memview(r, np.array(list(z)), out)
-#         # nums to rgbRate
-#         # rgb = list(map(lambda x: 255 * x/sum(nums), nums))
-#         # rgb > 'rgb()'
-#         # rgb = ['rgb(%d,%d,%d)' % (i, i, i) for i in rgb]
-#         rgb = [r if r <= 255 else 255 for r in nums]
-#         item.loc[:, 'color'] = rgb
-#         res = list(item.T.to_dict().values())
-#         # print('res', res[:5])
-#         return res
-#
-#     # mappings -> dataframe
-#     output = pd.DataFrame(output)
-#     output = output.astype('int')
-#     length = len(output)
-#     # slice intervals
-#     start = range(length)[::threshold]
-#     end = range(length)[threshold::threshold]
-#     intervals = list(zip(start, end))
-#     # keep intervals complete
-#     if length % threshold:
-#         from itertools import chain
-#         last = (end[-1], length)
-#         intervals.append(last)
-#
-#     # partial
-#     from functools import partial
-#     func = partial(run, df=output, r=r**2)
-#
-#     # parallel
-#     from multiprocessing import cpu_count
-#     from concurrent.futures.thread import ThreadPoolExecutor
-#     from concurrent.futures import as_completed
-#     # 1、多进程开销太大超过的可以节省的时间,多线程开销比循环慢，
-#     # 2、主要是通过cython编译与内存试图数据结构在1000-3000单次就非常快,循环没有过大开销，如果超过总点数很大，选择方案1
-#     # from concurrent.futures.process import ProcessPoolExecutor
-#     # with ProcessPoolExecutor(max_workers=cpu_count()) as p:
-#     with ThreadPoolExecutor(max_workers=cpu_count()) as p:
-#         futures = [p.submit(func, args) for args in intervals]
-#
-#     # get result
-#     outcome = [f.result() for f in as_completed(futures)]
-#     # chain
-#     from itertools import chain
-#     result = list(chain(*outcome))
-#     print('result', result[:3])
-#     return result
+    # mappings -> dataframe
+    output = pd.DataFrame(output)
+    output = output.astype('int')
+    length = len(output)
+    # slice intervals
+    start = range(length)[::threshold]
+    end = range(length)[threshold::threshold]
+    intervals = list(zip(start, end))
+    # keep intervals complete
+    if length % threshold:
+        from itertools import chain
+        last = (end[-1], length)
+        intervals.append(last)
+
+    # partial
+    from functools import partial
+    func = partial(run, df=output, r=r**2)
+
+    # parallel
+    from multiprocessing import cpu_count
+    from concurrent.futures.thread import ThreadPoolExecutor
+    from concurrent.futures import as_completed
+    # 1、多进程开销太大超过的可以节省的时间,多线程开销比循环慢，
+    # 2、主要是通过cython编译与内存试图数据结构在1000-3000单次就非常快,循环没有过大开销，如果超过总点数很大，选择方案1
+    # from concurrent.futures.process import ProcessPoolExecutor
+    # with ProcessPoolExecutor(max_workers=cpu_count()) as p:
+    with ThreadPoolExecutor(max_workers=cpu_count()) as p:
+        futures = [p.submit(func, args) for args in intervals]
+
+    # get result
+    outcome = [f.result() for f in as_completed(futures)]
+    # chain
+    from itertools import chain
+    result = list(chain(*outcome))
+    print('result', result[:3])
+    return result
+
 
 def count_time(f):
     func = f.__name__

@@ -35,23 +35,19 @@ def simulateRgb(output, r=50, threshold=1000):
         intervals.append(bottom)
         return intervals
 
-    def run(delta, df, r):
+    def run(delta, df, delimeter):
         s, e = delta
         item = df.iloc[s: e, :]
         x = np.array(item['speed'].values)
         y = np.array(item['torque'].values)
         z = np.array(list(zip(x, y)))
         # nums = rgb_memview(r, np.array(list(z)))
-        nums = rgb_numpy(r, np.array(list(z)))
+        # nums = rgb_numpy(r, np.array(list(z)))
+        nums = rgb_numpy(delimeter, z)
         # nums = rgb_prange(r, np.array(list(z)))
         # nums to rgbRate
-        # rgb = list(map(lambda x: 255 * x/sum(nums), nums))
-        # rgb > 'rgb()'
-        # rgb = ['rgb(%d,%d,%d)' % (i, i, i) for i in rgb]
-        rgb = [r if r <= 255 else 255 for r in nums]
-        item.loc[:, 'color'] = rgb
-        res = list(item.T.to_dict().values())
-        # print('res', res[:5])
+        # nums = list(map(lambda x: 255 * x/sum(nums), nums))
+        res = [{'speed': item[0][0], 'torque': item[0][1], 'color': item[1]} for item in zip(z, nums)]
         return res
 
     # mappings -> dataframe
@@ -83,5 +79,9 @@ if __name__ == '__main__':
     # simulateRgb(p, r)
     positions = simulateRgb(p, r)
     print('rgb_numpy nums', len(positions), positions[:10])
+    positions_1 = simulateRgb(p, 100)
+    print('rgb_numpy nums_1', len(positions_1), positions_1[:10])
+    positions_2 = simulateRgb(p, 50)
+    print('rgb_numpy nums_2', len(positions_2), positions_2[:10])
     elapsed = time.time() - t1
     print('rgb_numpy elapsed', elapsed)

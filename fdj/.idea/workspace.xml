@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91f45554-3901-46e1-b508-edef6b8792e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib_validate.py" afterDir="false" />
+    <list default="true" id="91f45554-3901-46e1-b508-edef6b8792e6" name="Default Changelist" comment="revise test.py">
+      <change afterPath="$PROJECT_DIR$/tests/test_analyze.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_cas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_compare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_contour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_grpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_history.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_public.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_theory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib.macosx-11.1-arm64-3.8/instance/lib/calculate.cpython-38-darwin.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib.macosx-11.1-arm64-3.8/instance/lib/rgb.cpython-38-darwin.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/temp.macosx-11.1-arm64-3.8/instance/lib/calculate.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/temp.macosx-11.1-arm64-3.8/instance/lib/rgb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf.ini" beforeDir="false" afterPath="$PROJECT_DIR$/instance/conf.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/bp/cas.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/bp/cas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/db/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/db/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/lib/calculate.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/lib/calculate.cpython-38-darwin.so" beforeDir="false" afterPath="$PROJECT_DIR$/instance/lib/calculate.cpython-38-darwin.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/lib/rgb.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/lib/rgb.cpython-38-darwin.so" beforeDir="false" afterPath="$PROJECT_DIR$/instance/lib/rgb.cpython-38-darwin.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/lib/rgb.pyx" beforeDir="false" afterPath="$PROJECT_DIR$/instance/lib/rgb.pyx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/utils/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/instance/utils/cfg.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/cfg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/utils/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testAES.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/testFdj.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib_validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/lib_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_aes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +90,10 @@
     <setting file="file://$PROJECT_DIR$/instance/bp/public.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/instance/utils/__init__.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/service.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tests/test_aes.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/instance/bp/history.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/instance/utils/tools.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/conf.ini" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/instance/conf.ini" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -210,7 +236,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/instance/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -224,36 +250,14 @@
       <recent name="$PROJECT_DIR$/testExcel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/instance" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/test" />
-      <recent name="$PROJECT_DIR$/instance" />
-      <recent name="$PROJECT_DIR$/instance/static" />
-      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.lib_validate">
-    <configuration name="lib_validate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fdj" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib_validate.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.test_lib">
     <configuration name="proc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fdj" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -342,6 +346,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_lib" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fdj" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_lib.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Twisted Trial">
       <module name="fdj" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -374,12 +400,12 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test_aes.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="fdj" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="$USER_HOME$/miniconda3/envs/fdj/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/instance/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -387,15 +413,15 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_aes.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.lib_validate" />
+        <item itemvalue="Python.test_lib" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python tests.pytest in test.py" />
+        <item itemvalue="Python tests.pytest in test_aes.py" />
         <item itemvalue="Python.testAES" />
         <item itemvalue="Python.proc" />
       </list>
@@ -455,8 +481,16 @@
       <workItem from="1650470532006" duration="598000" />
       <workItem from="1650509743479" duration="1280000" />
       <workItem from="1650708622517" duration="313000" />
-      <workItem from="1650771717192" duration="4432000" />
+      <workItem from="1650771717192" duration="16364000" />
     </task>
+    <task id="LOCAL-00001" summary="revise test.py">
+      <created>1650785018846</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650785018846</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -504,6 +538,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="revise test.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="revise test.py" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fdj$pytest_for_testFdj_TestCommand_testCompareGetPlans.coverage" NAME="pytest for testFdj.TestCommand.testCompareGetPlans Coverage Results" MODIFIED="1644907161031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fdj$tools.coverage" NAME="tools Coverage Results" MODIFIED="1646978296246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/instance/utils" />
@@ -525,6 +563,7 @@
     <SUITE FILE_PATH="coverage/fdj$pytest_for_testFdj_TestCommand_testCompareCalculate.coverage" NAME="pytest for testFdj.TestCommand.testCompareCalculate Coverage Results" MODIFIED="1644905994183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fdj$Twisted_Trial_for_TestFdj_TestFdj.coverage" NAME="Twisted Trial for TestFdj.TestFdj Coverage Results" MODIFIED="1644830305805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fdj$pytest_for_testFdj_TestCommand_testAnalyzeCalculate.coverage" NAME="pytest for testFdj.TestCommand.testAnalyzeCalculate Coverage Results" MODIFIED="1644905288587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fdj$lib_validate.coverage" NAME="lib_validate Coverage Results" MODIFIED="1650803687436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fdj$initContour.coverage" NAME="initContour Coverage Results" MODIFIED="1639394223112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/instance/algorithm" />
     <SUITE FILE_PATH="coverage/fdj$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1650373946948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/fdj$pytest_for_testFdj_TestCommand_testContourSave.coverage" NAME="pytest for testFdj.TestCommand.testContourSave Coverage Results" MODIFIED="1644994128472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -5,10 +5,11 @@ LABEL "maintainer" = "13776668123@163.com"
 
 USER root
 
-COPY requirements.txt /root/fdj/
+COPY docs/requirements.txt /root/fdj/
 
 WORKDIR /root/fdj
 
-RUN python -m pip install  --upgrade pip && pip3 install -r requirements.txt
+#RUN python -m pip install  --upgrade pip && pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY . /root/fdj
