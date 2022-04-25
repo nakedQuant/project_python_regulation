@@ -37,7 +37,7 @@ class TestCommand(unittest.TestCase):
         p = {"token": "test", "time": 16345323525, "sign": "test",
              "params": {}
              }
-        file = '/datasets/test.csv'
+        file = './tests/datasets/test.csv'
         self.req(p, 'receive', files={'file': ('test.csv',
                                                open(file, 'rb'), 'application/vnd.ms-excel', {'Expires': '0'})})
 
