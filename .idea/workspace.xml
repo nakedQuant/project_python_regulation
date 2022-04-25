@@ -4,20 +4,6 @@
     <list default="true" id="5a4292e2-0ca5-4abc-9936-3b88eed699b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/.flake8" beforeDir="false" afterPath="$PROJECT_DIR$/template/.flake8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/algorithm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/algorithm/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/algorithm/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/algorithm/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/bp/page1.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/bp/page1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/bp/page2.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/bp/page2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/bp/page4.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/bp/page4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/bp/page5.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/bp/page5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/bp/public.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/bp/public.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/db/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/db/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/protobuf/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/protobuf/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/instance/utils/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/instance/utils/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tests/test_page4.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/tests/test_page4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/tests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/tests/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650861089528</updated>
-      <workItem from="1650861090675" duration="6039000" />
+      <workItem from="1650861090675" duration="7818000" />
     </task>
     <task id="LOCAL-00001" summary="remove test datasets">
       <created>1650862641886</created>
@@ -75,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650863191443</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pep8 standards">
+      <created>1650877216296</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650877216296</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +88,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove test datasets" />
     <MESSAGE value="revise test_public.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="revise test_public.py" />
+    <MESSAGE value="pep8 standards" />
+    <option name="LAST_COMMIT_MESSAGE" value="pep8 standards" />
   </component>
 </project>

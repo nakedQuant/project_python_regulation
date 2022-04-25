@@ -1,20 +1,5 @@
 [flake8]
-# it's not a bug that we aren't using all of hacking, ignore:
-# F812: list comprehension redefines ...
-# F841: but never used
-# H101: Use TODO(NAME)
-# H202: assertRaises Exception too broad
-# H233: Python 3.x incompatible use of print operator
-# H301: one import per line
-# H306: imports not in alphabetical order (time, os)
-# H401: docstring should not start with a space
-# H403: multi line docstrings should end on a new line
-# H404: multi line docstring should start without a leading new line
-# H405: multi line docstring summary not separated with an empty line
-# H501: Do not use self.__dict__ for string formatting
-# E501: line too long (84 > 79 characters)
-
-ignore = E501, F841
+ignore = F841
 exclude =
     # git repos
     .git,
@@ -36,3 +21,19 @@ per-file-ignores =
     __init__.py: F401
 
 max-complexity = 10
+max-line-length = 120
+
+# it's not a bug that we aren't using all of hacking, ignore:
+# F812: list comprehension redefines ...
+# F841: but never used
+# H101: Use TODO(NAME)
+# H202: assertRaises Exception too broad
+# H233: Python 3.x incompatible use of print operator
+# H301: one import per line
+# H306: imports not in alphabetical order (time, os)
+# H401: docstring should not start with a space
+# H403: multi line docstrings should end on a new line
+# H404: multi line docstring should start without a leading new line
+# H405: multi line docstring summary not separated with an empty line
+# H501: Do not use self.__dict__ for string formatting
+# E501: line too long (84 > 79 characters)
