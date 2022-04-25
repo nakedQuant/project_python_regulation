@@ -11,8 +11,7 @@ import base64
 from flask import Blueprint
 from flask import abort
 from flask import request
-from ..db import dbs
-from ..utils import validate, count_time, jsonEncoder, aes_ecb_decrypted, register, cas_token
+from ..utils import count_time, jsonEncoder, aes_ecb_decrypted, register, cas_token
 
 public = Blueprint('public', __name__)
 

@@ -18,4 +18,3 @@ page4 = Blueprint('page4', __name__, url_prefix='/page4')
 def index():
     resp = 'Hello, page4'
     return jsonEncoder(resp)
-

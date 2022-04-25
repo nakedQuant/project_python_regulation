@@ -10,7 +10,6 @@ from setuptools import setup
 from Cython.Build import cythonize
 
 setup(
-    #name='rgb',
     ext_modules=cythonize(['./instance/lib/*.pyx']),
     include_dirs=[np.get_include()],
     zip_safe=False

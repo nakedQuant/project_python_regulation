@@ -7,8 +7,6 @@ Created on 2021.11.4
 
 """
 import unittest
-import base64
-import pandas as pd
 from utils import get_req
 
 

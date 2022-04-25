@@ -5,5 +5,3 @@ Created on Tue Mar 12 15:37:47 2019
 
 @author: python
 """
-from .models import generateModel, predict, generatePickle
-from .test import generateContour

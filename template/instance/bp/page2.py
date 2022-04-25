@@ -7,9 +7,8 @@ Created on 2021.11.4
 
 blueprint:静态匹配
 """
-from flask import Blueprint, request, abort
-from ..db import dbs
-from ..utils import validate, jsonEncoder
+from flask import Blueprint
+from ..utils import jsonEncoder
 
 
 page2 = Blueprint('page2', __name__, url_prefix='/page2')

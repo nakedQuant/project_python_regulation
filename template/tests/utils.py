@@ -28,4 +28,3 @@ def post_req(param, endPoint, files):
     print('response', response.text)
     response = json.loads(response.text)
     return response['status']
-

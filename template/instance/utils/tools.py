@@ -12,10 +12,11 @@ import json
 import numpy as np
 from typing import Any
 import pandas as pd
+from itertools import chain
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 from .cfg import cf
-from ..lib import rgb_numpy, rgb_memview, rgb_prange
+from ..lib import rgb_memview
 
 
 def jsonEncoder(resp):
@@ -99,7 +100,6 @@ def simulateRgb(output, r, threshold=1000):
     intervals = list(zip(start, end))
     # keep intervals complete
     if length % threshold:
-        from itertools import chain
         last = (end[-1], length)
         intervals.append(last)
     # partial
@@ -114,14 +114,12 @@ def simulateRgb(output, r, threshold=1000):
     # 2、主要是通过cython编译与内存试图数据结构在1000-3000单次就非常快,循环没有过大开销，如果超过总点数很大，选择方案1
     # from concurrent.futures.process import ProcessPoolExecutor
     # with ProcessPoolExecutor(max_workers=cpu_count()) as p:
-    with ThreadPoolExecutor(max_workers=cpu_count()/2) as p:
+    with ThreadPoolExecutor(max_workers=cpu_count() / 2) as p:
         futures = [p.submit(func, args) for args in intervals]
 
     # get result
     outcome = [f.result() for f in as_completed(futures)]
     # outcome = [func(args) for args in intervals]
-    # chain
-    from itertools import chain
     result = list(chain(*outcome))
     print('result', result[:3])
     return result

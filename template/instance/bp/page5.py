@@ -8,8 +8,7 @@ Created on 2021.11.4
 blueprint:万有特性曲线
 """
 from flask import Blueprint
-from ..utils import validate, jsonEncoder
-from ..db import dbs
+from ..utils import jsonEncoder
 
 
 page5 = Blueprint('page5', __name__, url_prefix='/page5')

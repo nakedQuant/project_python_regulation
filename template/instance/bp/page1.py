@@ -9,7 +9,7 @@ blueprint:曲线对比
 
 """
 from flask import Blueprint
-from ..utils import validate, jsonEncoder
+from ..utils import jsonEncoder
 
 
 page1 = Blueprint('page1', __name__, url_prefix='/page1')
