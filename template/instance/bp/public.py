@@ -69,7 +69,6 @@ def upload():
     params = req_params['params']
     try:
         pic = os.path.join(os.path.join(os.path.abspath('./instance'), 'static'), '%s.png' % params['picName'])
-        # return send_file(picPath)
         with open(pic, 'rb') as f:
             base64_data = base64.b64encode(f.read())
 
@@ -77,6 +76,7 @@ def upload():
                 'data': {'data': str(base64_data, encoding='utf-8')}}
     except Exception as e:
         resp = {'status': 1, 'errorInfo': e.args[-1]}
+    # return send_file(picPath)
     return jsonEncoder(resp)
 
 
