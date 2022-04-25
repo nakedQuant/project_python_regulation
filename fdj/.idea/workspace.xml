@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91f45554-3901-46e1-b508-edef6b8792e6" name="Default Changelist" comment="revise test.py">
-      <change afterPath="$PROJECT_DIR$/tests/test_analyze.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_cas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_compare.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_contour.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_grpc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_history.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_public.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_theory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/utils.py" afterDir="false" />
+    <list default="true" id="91f45554-3901-46e1-b508-edef6b8792e6" name="Default Changelist" comment="modify and add specific tests">
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/conf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/protobuf/env_manager.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/protobuf/env_manager.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/protobuf/env_manager_grpc.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/protobuf/shmem_dataset.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/EnvManager-Go/queue/queue.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/protobuf/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/protobuf/env_manager.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/protobuf/env_manager_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/protobuf/env_manager_pb2_grpc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/protobuf/shmem_dataset.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/protobuf/shmem_dataset_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/instance/protobuf/shmem_dataset_pb2_grpc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib.macosx-11.1-arm64-3.8/instance/lib/calculate.cpython-38-darwin.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib.macosx-11.1-arm64-3.8/instance/lib/rgb.cpython-38-darwin.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/temp.macosx-11.1-arm64-3.8/instance/lib/calculate.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/temp.macosx-11.1-arm64-3.8/instance/lib/rgb.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf.ini" beforeDir="false" afterPath="$PROJECT_DIR$/instance/conf.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/bp/cas.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/bp/cas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/db/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/db/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/lib/calculate.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/lib/calculate.cpython-38-darwin.so" beforeDir="false" afterPath="$PROJECT_DIR$/instance/lib/calculate.cpython-38-darwin.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/lib/rgb.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/lib/rgb.cpython-38-darwin.so" beforeDir="false" afterPath="$PROJECT_DIR$/instance/lib/rgb.cpython-38-darwin.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/lib/rgb.pyx" beforeDir="false" afterPath="$PROJECT_DIR$/instance/lib/rgb.pyx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/utils/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/utils/cfg.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/cfg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/instance/utils/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/instance/utils/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib_validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/lib_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_aes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,16 +220,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/instance/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/instance" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/instance" />
       <recent name="$PROJECT_DIR$/instance/lib" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/instance" />
       <recent name="$PROJECT_DIR$/instance/tmp/history/source" />
       <recent name="$PROJECT_DIR$/testExcel" />
     </key>
@@ -481,7 +465,7 @@
       <workItem from="1650470532006" duration="598000" />
       <workItem from="1650509743479" duration="1280000" />
       <workItem from="1650708622517" duration="313000" />
-      <workItem from="1650771717192" duration="16364000" />
+      <workItem from="1650771717192" duration="18617000" />
     </task>
     <task id="LOCAL-00001" summary="revise test.py">
       <created>1650785018846</created>
@@ -490,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650785018846</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modify and add specific tests">
+      <created>1650845395243</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650845395243</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -540,7 +531,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="revise test.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="revise test.py" />
+    <MESSAGE value="modify and add specific tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify and add specific tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fdj$pytest_for_testFdj_TestCommand_testCompareGetPlans.coverage" NAME="pytest for testFdj.TestCommand.testCompareGetPlans Coverage Results" MODIFIED="1644907161031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
