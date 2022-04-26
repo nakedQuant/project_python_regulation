@@ -36,7 +36,7 @@ services:
       flask_port: 20000
     depends_on:
       - redis
-    command: python3 service.py
+    command: python3 run.py
     networks:
       - default
 
