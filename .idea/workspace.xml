@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a4292e2-0ca5-4abc-9936-3b88eed699b7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/runinit.py" beforeDir="false" afterPath="$PROJECT_DIR$/template/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650861089528</updated>
-      <workItem from="1650861090675" duration="10282000" />
+      <workItem from="1650861090675" duration="10989000" />
     </task>
     <task id="LOCAL-00001" summary="remove test datasets">
       <created>1650862641886</created>
@@ -82,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650887175177</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rename runinit.py to run.py (initialize scripts)">
+      <created>1650888183654</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1650888183654</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +111,7 @@
     <MESSAGE value="pep8 standards" />
     <MESSAGE value="revise .flake8" />
     <MESSAGE value="revise shell.sh" />
-    <option name="LAST_COMMIT_MESSAGE" value="revise shell.sh" />
+    <MESSAGE value="rename runinit.py to run.py (initialize scripts)" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename runinit.py to run.py (initialize scripts)" />
   </component>
 </project>
